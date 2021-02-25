@@ -16,7 +16,8 @@ unless using_system_libraries?
   recipe.files = ['https://github.com/stedolan/jq/archive/jq-1.6.tar.gz']
   recipe.configure_options = [
     '--enable-shared',
-    '--disable-maintainer-mode'
+    '--disable-maintainer-mode',
+    '--disable-dependency-tracking'
   ]
   class << recipe
     def configure
